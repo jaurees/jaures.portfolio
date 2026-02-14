@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Portfolio | Jaurès Joachim Ramaroson</title>
+  <meta name="description" content="Portfolio – Éducation, ErEDD, projets terrain, certifications, visuels."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <!-- Background blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <a class="brand" href="#" data-nav="home" aria-label="Aller à l'accueil">
+        <span class="brand__mark">JR</span>
+        <span class="brand__text">Portfolio</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__links" id="desktopNav">
+          <li><button class="nav__btn is-active" data-nav="home">Accueil</button></li>
+          <li><button class="nav__btn" data-nav="portfolio">Portfolio</button></li>
+          <li><button class="nav__btn" data-nav="certifs">Certifications</button></li>
+          <li><button class="nav__btn" data-nav="projets">Projets</button></li>
+          <li><button class="nav__btn" data-nav="contact">Contact</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <div class="mobile-nav__panel">
+        <div class="mobile-nav__head">
+          <div class="brand brand--mini">
+            <span class="brand__mark">JR</span>
+            <span class="brand__text">Menu</span>
+          </div>
+          <button class="icon-btn" id="closeMobileNav" aria-label="Fermer le menu">
+            ✕
+          </button>
+        </div>
+        <div class="mobile-nav__links">
+          <button class="nav__btn is-active" data-nav="home">Accueil</button>
+          <button class="nav__btn" data-nav="portfolio">Portfolio</button>
+          <button class="nav__btn" data-nav="certifs">Certifications</button>
+          <button class="nav__btn" data-nav="projets">Projets</button>
+          <button class="nav__btn" data-nav="contact">Contact</button>
+        </div>
+        <p class="hint">Les pages sont cachées : utilise le menu pour naviguer.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" role="main">
+    <!-- HOME -->
+    <section class="page is-visible" id="page-home" data-page="home">
+      <div class="container">
+        <div class="hero">
+          <div class="hero__left">
+            <div class="pill">
+              <span class="dot"></span>
+              <span>Éducation • ErEDD • Projets terrain • Visuels</span>
+            </div>
+
+            <h1 class="h1">
+              Jaurès Joachim <span class="grad">Ramaroson</span>
+            </h1>
+
+            <p class="lead">
+              Portfolio professionnel : actions terrain, supports pédagogiques, certifications,
+              et productions visuelles (photos drone, affiches, illustrations).
+            </p>
+
+            <div class="hero__cta">
+              <button class="btn btn--primary" data-nav="portfolio">Voir le portfolio</button>
+              <button class="btn btn--ghost" data-nav="contact">Me contacter</button>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="stat__num" id="statPhotos">—</div>
+                <div class="stat__label">Visuels</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num" id="statCerts">—</div>
+                <div class="stat__label">Certifications</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num">ErEDD</div>
+                <div class="stat__label">Orientation</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__right">
+            <div class="hero-card">
+              <div class="hero-card__top">
+                <div class="chip">Sélection</div>
+                <div class="chip chip--soft">Drone & Terrain</div>
+              </div>
+
+              <div class="hero-media" id="heroMedia">
+                <!-- Injected by JS -->
+              </div>
+
+              <div class="hero-card__bottom">
+                <div class="small">
+                  Astuce : clique sur une image pour l’ouvrir en plein écran.
+                </div>
+                <button class="btn btn--small" data-nav="portfolio">Explorer →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <h3 class="h3">Approche</h3>
+            <p>
+              Pédagogie, suivi terrain, création de contenus (affiches, leçons, supports),
+              et valorisation des actions par des visuels.
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="h3">Domaines</h3>
+            <p>
+              Éducation, développement durable, hygiène & bonnes pratiques,
+              engagement communautaire, pilotage d’activités.
+            </p>
+          </article>
+          <article class="card">
+            <h3 class="h3">Objectif</h3>
+            <p>
+              Mettre en valeur les résultats : preuves (certificats), supports produits,
+              et photos terrain.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="page" id="page-portfolio" data-page="portfolio">
+      <div class="container">
+        <div class="page-head">
+          <div>
+            <h2 class="h2">Portfolio</h2>
+            <p class="muted">Photos drone, terrain, illustrations et supports.</p>
+          </div>
+
+          <div class="filters">
+            <button class="filter is-active" data-filter="all">Tout</button>
+            <button class="filter" data-filter="drone">Drone</button>
+            <button class="filter" data-filter="terrain">Terrain</button>
+            <button class="filter" data-filter="illustrations">Illustrations</button>
+            <button class="filter" data-filter="affiches">Affiches</button>
+          </div>
+        </div>
+
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- CERTIFS -->
+    <section class="page" id="page-certifs" data-page="certifs">
+      <div class="container">
+        <div class="page-head">
+          <div>
+            <h2 class="h2">Certifications</h2>
+            <p class="muted">Attestations & preuves de formation.</p>
+          </div>
+          <button class="btn btn--ghost" data-nav="contact">Demander le PDF / preuve</button>
+        </div>
+
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="page" id="page-projets" data-page="projets">
+      <div class="container">
+        <div class="page-head">
+          <div>
+            <h2 class="h2">Projets</h2>
+            <p class="muted">Exemples de contenus et actions.</p>
+          </div>
+        </div>
+
+        <div class="proj-grid">
+          <article class="proj card">
+            <div class="proj__head">
+              <span class="tag">ErEDD</span>
+              <span class="tag tag--soft">Éducation</span>
+            </div>
+            <h3 class="h3">Affiche – Fahadiovana</h3>
+            <p class="muted">
+              Support pédagogique (hygiène, comportements, routine) adapté aux élèves.
+            </p>
+            <button class="btn btn--small" data-open="fahadiovana-1_p1.png">Voir l’affiche</button>
+          </article>
+
+          <article class="proj card">
+            <div class="proj__head">
+              <span class="tag">Terrain</span>
+              <span class="tag tag--soft">Animation</span>
+            </div>
+            <h3 class="h3">Photo – Session / groupe</h3>
+            <p class="muted">
+              Exemple de mobilisation et d’activité sur site.
+            </p>
+            <button class="btn btn--small" data-open="Media-3.jpeg">Voir la photo</button>
+          </article>
+
+          <article class="proj card">
+            <div class="proj__head">
+              <span class="tag">Illustration</span>
+              <span class="tag tag--soft">Culture</span>
+            </div>
+            <h3 class="h3">Illustrations – scènes de vie</h3>
+            <p class="muted">
+              Dessins / aquarelles pour contenus pédagogiques ou narratifs.
+            </p>
+            <button class="btn btn--small" data-open="unnamed.jpg">Voir</button>
+          </article>
+
+          <article class="proj card">
+            <div class="proj__head">
+              <span class="tag">Drone</span>
+              <span class="tag tag--soft">Paysage</span>
+            </div>
+            <h3 class="h3">Paysages – prises de vue</h3>
+            <p class="muted">
+              Visuels pour valorisation : environnement, villages, relief.
+            </p>
+            <button class="btn btn--small" data-open="DJI_0752.jpg">Ouvrir</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="page" id="page-contact" data-page="contact">
+      <div class="container">
+        <div class="page-head">
+          <div>
+            <h2 class="h2">Contact</h2>
+            <p class="muted">Prêt à collaborer / échanger sur un projet.</p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card">
+            <h3 class="h3">Coordonnées</h3>
+            <p class="muted">Remplace/complète ces infos si besoin.</p>
+
+            <div class="kv">
+              <div class="kv__k">Nom</div>
+              <div class="kv__v">Jaurès Joachim Ramaroson</div>
+            </div>
+            <div class="kv">
+              <div class="kv__k">Email</div>
+              <div class="kv__v"><a href="mailto:">ton.email@exemple.com</a></div>
+            </div>
+            <div class="kv">
+              <div class="kv__k">Téléphone</div>
+              <div class="kv__v"><a href="tel:">+261 …</a></div>
+            </div>
+
+            <div class="sep"></div>
+
+            <div class="small muted">
+              Ce site fonctionne sur GitHub Pages (HTML/CSS/JS uniquement).
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="h3">Message rapide</h3>
+            <p class="muted">Formulaire local (ouvre ton mail).</p>
+
+            <form id="contactForm">
+              <label class="label">Objet</label>
+              <input class="input" type="text" id="subject" placeholder="Objet…" required />
+
+              <label class="label">Message</label>
+              <textarea class="textarea" id="message" rows="6" placeholder="Écris ton message…" required></textarea>
+
+              <button class="btn btn--primary" type="submit">Ouvrir mon mail →</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden aria-hidden="true">
+    <div class="lightbox__backdrop" data-close="1"></div>
+    <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Aperçu image">
+      <div class="lightbox__top">
+        <div class="lightbox__title" id="lightboxTitle">Aperçu</div>
+        <div class="lightbox__actions">
+          <a class="icon-btn" id="lightboxOpen" href="#" target="_blank" rel="noopener">↗</a>
+          <button class="icon-btn" id="lightboxClose" data-close="1" aria-label="Fermer">✕</button>
+        </div>
+      </div>
+      <div class="lightbox__content">
+        <img id="lightboxImg" alt="Aperçu" />
+      </div>
+      <div class="lightbox__caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">© <span id="year"></span> — Portfolio</span>
+      <div class="footer__links">
+        <button class="link" data-nav="home">Accueil</button>
+        <button class="link" data-nav="contact">Contact</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
